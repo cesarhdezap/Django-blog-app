@@ -1,0 +1,29 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    color: red;
+}
+
+h3 {
+    color: red;
+}
+
+p {
+    font-weight: 100;
+}
+
+#subtitle {
+    font-weight: 100;
+    font-style: italic;
+}
+
+.content-block {
+    padding: 10px;
+    margin: 10px;
+}
