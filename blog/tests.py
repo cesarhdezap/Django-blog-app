@@ -37,7 +37,7 @@ class BlogTests(TestCase):
 
     def test_post_detail_view(self):
         response = self.client.get('/post/1/')
-        no_response = self.client.get('/post/1000')
+        no_response = self.client.get("/post/1000/")
         self.assertEqual(response.status_code, 200)
         self.assertEqual(no_response.status_code, 404)
         self.assertContains(response, "A title")
@@ -46,7 +46,7 @@ class BlogTests(TestCase):
 
     def test_reverse_lookup(self):
         post_list_response = self.client.get(reverse("home"))
-        post_detail_response = self.client.get(reverse("post_detail", args["1"]))
+        post_detail_response = self.client.get(reverse("post_detail", args=["1"]))
         self.assertEqual(post_list_response.status_code, 200)
         self.assertEqual(post_detail_response.status_code, 200)
         self.assertContains(post_list_response, "A title")
