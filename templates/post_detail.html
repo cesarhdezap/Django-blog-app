@@ -6,4 +6,5 @@
     <h1>{{ post.title }}</h1>
     <p id="subtitle">By {{ post.author }} | On {{post.created_at}}</p>
     <p>{{ post.body}}</p>
+    <a href="{% url 'post_edit' post.id %}" class="btn btn-success">Edit</a>
 {% endblock content %}
